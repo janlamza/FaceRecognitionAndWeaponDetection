@@ -159,6 +159,9 @@ docker-compose.yml
 Dockerfile
 dockerignore
 Dockerfile.test
+
+#models too large for git
+models/*.pt
 # mypy
 .mypy_cache/
 .dmypy.json
