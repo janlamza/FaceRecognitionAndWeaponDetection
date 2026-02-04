@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Real-time Face Recognition</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Real-time Face Recognition</h1>
+    <hr class="section-divider">
+	<div id="status-message" class="status-message hidden"></div>
+    <div id="gallery-wrapper">
+        <div id="container">
+            <video id="video" width="640" height="480" autoplay muted></video>
+            <canvas id="overlay" width="640" height="480"></canvas>
+        </div>
+        <div id="captures"></div>
+    </div>
+    <p id="result" style="display:none;">Faces: </p>
+    
+
+    <!-- Pop-up forma -->
+    <div id="popup-form">
+        <h3>Spremi nepoznatu osobu</h3>
+        <form id="personForm">
+            <input type="hidden" name="id" id="personId">
+            <input type="hidden" name="image_data" id="popupImageData">
+            <input type="text" name="name" placeholder="Ime" required>
+            <input type="text" name="surname" placeholder="Prezime">
+            <input type="number" name="age" placeholder="Dob">
+            <input type="text" name="nationality" placeholder="Nacionalnost">
+            <input type="text" name="criminal_record" placeholder="Kazneni dosje">
+            <div style="text-align:right;">
+                <button type="submit">Spremi</button>
+                <button type="button" onclick="document.getElementById('popup-form').style.display='none';">Odustani</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- POPUP za prikaz referentne slike -->
+<div id="image-popup" class="image-popup hidden">
+    <img id="popup-person-image" src="" alt="Referentna slika">
+    <button onclick="document.getElementById('image-popup').classList.add('hidden');">Zatvori</button>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

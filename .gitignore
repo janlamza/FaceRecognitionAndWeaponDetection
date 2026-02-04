@@ -154,6 +154,11 @@ venv.bak/
 # mkdocs documentation
 /site
 
+#docker files
+docker-compose.yml
+Dockerfile
+dockerignore
+Dockerfile.test
 # mypy
 .mypy_cache/
 .dmypy.json

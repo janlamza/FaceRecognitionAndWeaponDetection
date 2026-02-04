@@ -1,0 +1,4 @@
+1. icona za pogled referentne slike iz baze osobe ✅
+2. crvena obavijest oko containera ako je osoba sa dosjeom ✅
+3. prepoznavanje oružja
+4. video profesor
